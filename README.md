@@ -52,7 +52,7 @@ The original file was written by @shk3 in/for `python3` then updated
 by @emadshaaban92 for python2, and migrated for versions superior to
 2.6 by @iemejia.
 
-## edx-combine-srt.py
+## edx-comb-srt.py
 After downloading videos(mp4) and corresponding subtitle files(srt), combine them
 together into one mp4 file if necessary. now you can see videos with subtitles
 iPhone music application.
