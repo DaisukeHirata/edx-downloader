@@ -33,14 +33,14 @@ or
 
 For more info, see <http://www.crummy.com/software/BeautifulSoup/#Download>.
 
-## ffmpeg for combining srt file
+## MP4box for combining srt file
 
-combine video file(mp4) and srt file.
-for mac homebrew user, install with
+combine video file(mp4) and srt file. you need MP4Box
+for homebrew user, install with
 
-    brew install ffmpeg
+    brew install mp4box
 
-For more info, see <http://www.ffmpeg.org/>.
+For more info, see <http://www.videohelp.com/tools/mp4box>.
 
 
 # Files
