@@ -55,8 +55,7 @@ by @emadshaaban92 for python2, and migrated for versions superior to
 ## edx-comb-srt.py
 After downloading videos(mp4) and corresponding subtitle files(srt), combine them
 together into one mp4 file if necessary. now you can see videos with subtitles
-iPhone video application.
-
+iPhone video application. It should work fine only in Mac OS X currently.
 
 # Quick Start
 
