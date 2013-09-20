@@ -75,9 +75,9 @@ as in:
     python edx-dl.py [-u user@user.com] [-p password]
 
 
-To use `edx-combine-srt.py` after `edx-dl.py`, simply excute it, as in:
+To use `edx-comb-srt.py` after `edx-dl.py`, simply excute it, as in:
 
-    python edx-combine-srt.py
+    python edx-comb-srt.py
 
 Your combined videos will be placed in a new Directory called
 "Downloaded" and prefixed with "srt_".
