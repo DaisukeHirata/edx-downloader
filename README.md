@@ -33,6 +33,16 @@ or
 
 For more info, see <http://www.crummy.com/software/BeautifulSoup/#Download>.
 
+## ffmpeg for combining srt file
+
+combine video file(mp4) and srt file.
+for mac homebrew user, install with
+
+    brew install ffmpeg
+
+For more info, see <http://www.ffmpeg.org/>.
+
+
 # Files
 
 ## edx-dl.py
@@ -42,13 +52,19 @@ The original file was written by @shk3 in/for `python3` then updated
 by @emadshaaban92 for python2, and migrated for versions superior to
 2.6 by @iemejia.
 
+## edx-combine-srt.py
+After downloading videos(mp4) and corresponding subtitle files(srt), combine them
+together into one mp4 file if necessary. now you can see videos with subtitles
+iPhone music application.
+
+
 # Quick Start
 
 To use `edx-dl.py`, simply excute it, as in:
 
     python edx-dl.py
 You will then be asked your username and password.
-    
+
 Your downloaded videos will be placed in a new Directory called
 "Downloaded".  The script is very interactive, and if you have a issue
 please tell us.
@@ -59,3 +75,9 @@ as in:
     python edx-dl.py [-u user@user.com] [-p password]
 
 
+To use `edx-combine-srt.py` after `edx-dl.py`, simply excute it, as in:
+
+    python edx-combine-srt.py
+
+Your combined videos will be placed in a new Directory called
+"Downloaded" and prefixed with "srt_".
