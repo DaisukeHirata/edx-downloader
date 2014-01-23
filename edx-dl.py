@@ -61,8 +61,8 @@ DEFAULT_USER_AGENTS = {"google-chrome": "Mozilla/5.0 (X11; Linux x86_64) AppleWe
 
 USER_AGENT = DEFAULT_USER_AGENTS["default"]
 
-USER_EMAIL = ""
-USER_PSWD = ""
+USER_EMAIL = "daisukihirata@gmail.com"
+USER_PSWD = "9nvfhxre"
 
 
 def get_initial_token():
@@ -100,17 +100,17 @@ def directory_name(initial_name):
     for ch in initial_name:
         if allowed_chars.find(ch) != -1:
             result_name+=ch
-    return result_name if result_name != "" else "course_folder" 
+    return result_name if result_name != "" else "course_folder"
 
 def parse_commandline_options(argv):
     global USER_EMAIL, USER_PSWD, DOWNLOAD_DIRECTORY, USER_AGENT
-    opts, args = getopt.getopt(argv, 
-                               "u:p:", 
+    opts, args = getopt.getopt(argv,
+                               "u:p:",
                                ["download-dir=", "user-agent=", "custom-user-agent="])
     for opt, arg in opts :
         if opt == "-u" :
             USER_EMAIL = arg
-        
+
         elif opt == "-p" :
             USER_PSWD = arg
 
@@ -126,13 +126,13 @@ def parse_commandline_options(argv):
 
         elif opt == "--custom-user-agent":
             USER_AGENT = arg
-            
+
         elif opt == "-h":
             usage()
 
 
 def usage() :
-    print("command-line options:") 
+    print("command-line options:")
     print("""-u <username>: (Optional) indicate the username.
 -p <password>: (Optional) indicate the password.
 --download-dir=<path>: (Optional) save downloaded files in <path>
@@ -141,7 +141,7 @@ def usage() :
 --custom-user-agent="MYUSERAGENT": (Optional) use the string "MYUSERAGENT" as
              user agent
 """)
-    
+
 
 
 def main():
@@ -156,9 +156,9 @@ def main():
         USER_EMAIL = input('Username: ')
     if  USER_PSWD == "":
         USER_PSWD = getpass.getpass()
-    
+
     if USER_EMAIL == "" or USER_PSWD == "":
-        print("You must supply username AND password to log-in") 
+        print("You must supply username AND password to log-in")
         sys.exit(2)
 
     # Prepare Headers
@@ -268,7 +268,7 @@ def main():
     # Say where it's gonna download files, just for clarity's sake.
     print("Saving videos into: " + DOWNLOAD_DIRECTORY)
     print("\n\n")
-    
+
     # Download Videos
     c = 0
     for v in video_link:
@@ -276,7 +276,7 @@ def main():
         cmd = 'youtube-dl -o "' + DOWNLOAD_DIRECTORY + '/' + directory_name(selected_course[0]) + '/' + \
         str(c).zfill(2) + '-%(title)s.%(ext)s" -f ' + str(video_fmt)
         if subtitles:
-            cmd += ' --write-srt'
+            cmd += ' --write-auto-sub'
         cmd += ' ' + str(v)
         os.system(cmd)
 

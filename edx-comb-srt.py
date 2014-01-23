@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 import glob
 import commands
@@ -20,7 +23,7 @@ if __name__ == '__main__':
     for mp4 in mp4_list:
         filename, ext = os.path.splitext(mp4)
         srt = filename + '.en.srt'
-        outfile = course_dir + '/srt_' + os.path.basename(mp4)
+        outfile = filename + '.srt.mp4'
         cmd = 'MP4Box -add "%s" -add "%s":hdlr=sbtl:lang=eng -new "%s"' % (mp4, srt, outfile)
         status, cmdoutput = commands.getstatusoutput(cmd)
         if status == 0:
